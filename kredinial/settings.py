@@ -29,7 +29,7 @@ SECRET_KEY = 'django-insecure-xxvy1n+ru#xfi9ukn*_xo0=$7_5mb5um8$zhvh%oe2n+%op=$)
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['kredinial.onrender.com']
+ALLOWED_HOSTS = ['.vercel.app', '.now.sh', 'localhost', '127.0.0.1', 'kredinial.net', 'kredinial.net.']
 
 
 # Application definition
@@ -92,8 +92,6 @@ CORS_ALLOW_HEADERS = [
 
 CORS_ALLOW_ALL_ORIGINS = True
 
-AKBANK_API_KEY = "l7e5c7d5a472f94cc097a0403a55575519"
-DEBUG = True
 
 
 DATABASES = {
@@ -115,7 +113,8 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATICFILES_DIRS = os.path.join(BASE_DIR, 'static')
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
 
 ROOT_URLCONF = 'kredinial.urls'
 
@@ -176,7 +175,6 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
-STATIC_URL = 'static/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
