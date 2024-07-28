@@ -29,7 +29,7 @@ SECRET_KEY = 'django-insecure-xxvy1n+ru#xfi9ukn*_xo0=$7_5mb5um8$zhvh%oe2n+%op=$)
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', '').split(',')
+ALLOWED_HOSTS = ['kredinial.onrender.com']
 
 
 # Application definition
@@ -81,6 +81,7 @@ MIDDLEWARE = [
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:5173",
     "http://127.0.0.1:5173",
+    'https://kredinial.net',
 ]
 
 
