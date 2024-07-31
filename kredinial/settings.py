@@ -30,6 +30,8 @@ INSTALLED_APPS = [
     'cloudinary',
 ]
 
+
+
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': [
         'rest_framework_simplejwt.authentication.JWTAuthentication',
@@ -73,11 +75,11 @@ CORS_ALLOW_HEADERS = [
 
 CORS_ALLOW_ALL_ORIGINS = True
 
-CLOUDINARY_STORAGE = {
-    'CLOUD_NAME': 'daietfhyy',
-    'API_KEY': '125315952264436',
-    'API_SECRET': 'fuBZ_F6ECCkmXBWsQN3mZQomQac',
-}
+cloudinary.config(
+    cloud_name='daietfhyy',
+    api_key='125315952264436',
+    api_secret='fuBZ_F6ECCkmXBWsQN3mZQomQac'
+)
 
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'

@@ -1,12 +1,13 @@
 from django.db import models
+from cloudinary.models import CloudinaryField
 
 class Bank(models.Model):
     name = models.CharField(max_length=100, unique=True)
-    ihtiyac_url = models.URLField(max_length=200, blank=True, null=True)  # İhtiyaç Kredisi URL alanı
-    konut_url = models.URLField(max_length=200, blank=True, null=True)  # Konut Kredisi URL alanı
-    tasit_url = models.URLField(max_length=200, blank=True, null=True)  # Taşıt Kredisi URL alanı
-    kobi_url = models.URLField(max_length=200, blank=True, null=True)  # Kobi Kredisi URL alanı
-    image = models.ImageField(upload_to='bank_images/', blank=True, null=True)  # Image alanı
+    ihtiyac_url = models.URLField(max_length=200, blank=True, null=True)  # 
+    konut_url = models.URLField(max_length=200, blank=True, null=True)  # 
+    tasit_url = models.URLField(max_length=200, blank=True, null=True)  # 
+    kobi_url = models.URLField(max_length=200, blank=True, null=True)  # 
+    image = CloudinaryField('image', blank=True, null=True) 
 
     def __str__(self):
         return self.name
